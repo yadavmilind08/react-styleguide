@@ -1,0 +1,19 @@
+@import "~styles/variables";
+
+.drawer-toggle {
+  width: 2.5em;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 0;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  div {
+    width: 90%;
+    height: 0.2em;
+    background-color: $top-nav-text-color;
+  }
+}

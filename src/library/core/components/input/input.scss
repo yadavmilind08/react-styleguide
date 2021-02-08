@@ -1,0 +1,47 @@
+@import "~styles/variables";
+
+.text-box {
+  position: relative;
+
+  &.ellipsis {
+    .k-textbox {
+      padding-right: 2em !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .small {
+    width: 15em;
+  }
+
+  .medium {
+    width: 20em;
+    padding: 0.4em 2.2em 0.4em 0.8em !important;
+  }
+
+  .large {
+    width: 25em;
+  }
+
+  .input-icon {
+    position: absolute;
+    right: 0.6em;
+    top: 0.5em;
+    line-height: 1.5em;
+    color: #7a7a7a;
+    cursor: pointer;
+    &:hover {
+      cursor: pointer;
+    }
+    &.pre {
+      right: 2.2em;
+      color: $input-placeholder-color;
+    }
+
+    svg {
+      width: 1.45em !important;
+    }
+  }
+}

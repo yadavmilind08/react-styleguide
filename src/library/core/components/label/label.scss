@@ -1,0 +1,11 @@
+@import '~styles/variables';
+
+div.label {
+    text-decoration: none;
+}
+
+.link {
+    text-decoration: underline;
+    color: $label-link-color !important;
+    cursor: pointer;
+}

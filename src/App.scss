@@ -1,0 +1,21 @@
+.App {
+  margin: 10px;
+}
+
+.modal {
+  width: 826px;
+  height: 588px;
+
+  .modal-header {
+    height: 20px;
+  }
+
+  .modal-body {
+    height: 472px;
+  }
+
+  .modal-footer {
+    height: 30px;
+    background-color: #f1f3f5;
+  }
+}

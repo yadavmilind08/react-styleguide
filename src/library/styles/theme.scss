@@ -1,0 +1,233 @@
+@import "~styles/variables";
+
+.phone,
+textarea.k-textarea,
+.k-autocomplete,
+.k-dropdown-wrap,
+.k-maskedtextbox .k-textbox,
+.k-numerictextbox .k-input,
+.k-datepicker {
+  font-size: 1em;
+  height: 2.4em !important;
+  background-color: $input-background-color !important;
+  border: none !important;
+  border-radius: 0.4em;
+  padding: 0.4em 0.8em !important;
+  font-weight: 600;
+  color: $input-text-color !important;
+}
+
+.k-textbox,
+.k-textarea {
+  font-family: $font-family !important;
+}
+
+.phone,
+input.k-textbox,
+.k-maskedtextbox .k-textbox,
+.k-numerictextbox .k-input,
+.k-datepicker,
+.k-autocomplete,
+.k-textbox,
+.k-dropdown-wrap,
+.k-textarea,
+.ant-picker {
+  border: 0.1em solid $input-border-color !important;
+}
+
+input.k-textbox,
+.k-textbox,
+.k-textarea {
+  font-size: 1em;
+  width: 100%;
+  height: 2.4em !important;
+  background-color: $input-background-color !important;
+  border-radius: 0.4em;
+  padding: 0.4em 0.8em !important;
+  font-weight: 600;
+  color: $input-text-color !important;
+  letter-spacing: 0.02em;
+}
+
+.k-dropdown-wrap .k-searchbar {
+  padding: 0em 0.8em !important;
+  input {
+    border-radius: 0.4em;
+    color: $input-text-color !important;
+    letter-spacing: 0.02em;
+    padding-top: 0.6em !important;
+  }
+}
+
+// focus
+.phone.PhoneInput--focus,
+.phone.PhoneInput--focus input,
+.k-textbox:focus,
+.k-textbox.k-state-focus,
+.k-dropdown-wrap.k-state-focused,
+.k-textarea:focus,
+.k-autocomplete.k-state-focused,
+.k-textarea.k-state-focus,
+.k-maskedtextbox .k-textbox:focus,
+.k-maskedtextbox .k-textbox.k-state-focus,
+.k-numerictextbox .k-input:focus,
+.k-numerictextbox .k-input.k-state-focus,
+.ant-picker-focused,
+.k-datepicker .k-picker-wrap.k-state-focused {
+  background-color: $input-background-focus-color !important;
+  border-color: $input-border-focus-color !important;
+  border-radius: 0.4em;
+}
+
+.k-dateinput .k-dateinput-wrap.k-state-focused {
+  border-color: transparent !important;
+}
+
+// hover
+.phone:hover,
+.k-textbox:hover,
+.k-textbox.k-state-hover,
+.k-autocomplete:hover,
+.k-input:hover,
+.k-input.k-state-hover,
+.k-dropdown-wrap:hover,
+.k-dropdown-wrap.k-state-hover:hover .k-textarea:hover,
+.k-textarea.k-state-hover,
+.k-input.k-textbox:hover,
+.k-input.k-textbox.k-state-hover,
+.k-maskedtextbox .k-textbox:hover,
+.k-maskedtextbox .k-textbox.k-state-hover,
+.k-numerictextbox .k-input:hover,
+.k-numerictextbox .k-input.k-state-hover,
+.k-datepicker:hover,
+.k-datepicker.k-state-hover {
+  border-color: $input-border-color !important;
+}
+
+.k-dropdown,
+.k-combobox,
+.k-autocomplete,
+.k-maskedtextbox,
+.k-numerictextbox,
+.k-datepicker {
+  font-size: 1.2rem !important;
+  font-weight: 600;
+  width: 100% !important;
+
+  .k-dropdown-wrap {
+    padding: 0 !important;
+
+    .k-input {
+      height: 100% !important;
+    }
+
+    .k-clear-value {
+      right: 1.4em !important;
+    }
+  }
+
+  .k-clear-value {
+    top: 0.2em !important;
+  }
+}
+
+.k-combobox {
+  .k-dropdown-wrap {
+    .k-input {
+      height: 2em !important;
+      line-height: 0 !important;
+    }
+  }
+}
+
+.k-numerictextbox .k-numeric-wrap.k-state-disabled {
+  border-bottom-style: none !important;
+}
+
+select,
+input {
+  &::placeholder {
+    font-size: 0.9em !important;
+    color: $input-placeholder-color !important;
+  }
+}
+
+.no-value {
+  input,
+  select,
+  .k-input,
+  .k-autocomplete,
+  .k-dropdown,
+  .k-dropdown-wrap .k-input,
+  .k-maskedtextbox .k-textbox {
+    color: $input-placeholder-color !important;
+  }
+}
+
+.auto-complete {
+  .input-icon {
+    position: absolute;
+    margin: 0.55em -3em;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.k-list-container,
+.k-calendar-container {
+  z-index: 2000 !important;
+}
+
+.k-animation-container {
+  &.k-animation-container-shown {
+    font-size: 1rem;
+    font-family: $font-family;
+    border: 0.1em solid $input-border-color;
+    border-radius: 0.5em !important;
+    margin-top: 0.3em;
+    overflow: hidden;
+    .k-popup {
+      font-size: 1.3em;
+      border: none;
+      box-shadow: none;
+      font-weight: 400;
+      .k-list-scroller {
+        ul {
+          li {
+            // padding: 0.2em 1em;
+            border-bottom: 0.1em solid $input-border-light-color;
+            &:first {
+              border-top: 0.1em solid $input-border-light-color;
+            }
+            :hover {
+              background-color: $input-selection-hover-background-color;
+            }
+          }
+        }
+      }
+      .k-list-filter {
+        padding: 0.5em;
+        min-height: 1em;
+        .k-textbox {
+          height: 1.8em !important;
+          font-size: 1em;
+          font-weight: 600;
+        }
+        .k-icon {
+          font-size: 1.1em;
+          right: 13px;
+          top: 55%;
+        }
+      }
+    }
+
+    &.hide-no-data {
+      border: none;
+      box-shadow: none;
+      .no-data {
+        display: none;
+      }
+    }
+  }
+}

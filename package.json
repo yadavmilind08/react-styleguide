@@ -1,0 +1,76 @@
+{
+  "name": "styleguide",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.1.0",
+    "@progress/kendo-data-query": "^1.5.3",
+    "@progress/kendo-date-math": "1.5.1",
+    "@progress/kendo-drawing": "1.6.0",
+    "@progress/kendo-react-animation": "^3.12.0",
+    "@progress/kendo-react-common": "3.12.0",
+    "@progress/kendo-react-data-tools": "^3.12.0",
+    "@progress/kendo-react-dateinputs": "3.12.0",
+    "@progress/kendo-react-dropdowns": "3.12.0",
+    "@progress/kendo-react-form": "3.12.0",
+    "@progress/kendo-react-grid": "^3.12.0",
+    "@progress/kendo-react-inputs": "3.12.0",
+    "@progress/kendo-react-intl": "3.12.0",
+    "@progress/kendo-react-layout": "^3.12.0",
+    "@progress/kendo-react-popup": "3.12.0",
+    "@progress/kendo-react-tooltip": "3.12.0",
+    "@progress/kendo-theme-default": "^4.14.0",
+    "@progress/kendo-theme-material": "^3.11.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "ant-design-draggable-modal": "0.0.16",
+    "antd": "^4.2.5",
+    "axios": "^0.20.0",
+    "babel-jest": "^25.1.0",
+    "classnames": "^2.2.6",
+    "file-loader": "^6.0.0",
+    "font-awesome": "^4.7.0",
+    "formik": "^2.1.4",
+    "moment": "^2.24.0",
+    "node-sass": "^4.13.1",
+    "prop-types": "15.7.2",
+    "react": "^16.13.1",
+    "react-app-polyfill": "^1.0.6",
+    "react-custom-scroll": "^4.2.0",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-date-picker": "^7.10.0",
+    "react-dom": "^16.13.1",
+    "react-drag-listview": "^0.1.7",
+    "react-hook-form": "6.13.0",
+    "react-intl": "^4.2.2",
+    "react-phone-number-input": "^3.0.23",
+    "react-resizable": "1.11.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.0",
+    "typescript": "^3.8.3",
+    "yup": "^0.28.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "ie 11"
+    ]
+  }
+}

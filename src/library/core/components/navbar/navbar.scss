@@ -1,0 +1,33 @@
+@import "~styles/variables";
+
+.navbar {
+  font-size: 1rem;
+
+  .MuiPaper-root {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    .MuiTabs-root {
+      min-height: 4.2em;
+
+      .MuiTabs-flexContainer {
+        margin-left: 5.5em;
+
+        .MuiTab-root {
+          font-size: 1.2em;
+          min-width: 4em;
+          min-height: auto;
+          margin: 0 2.7em 0 0;
+          padding: 1em 0em;
+
+          &.MuiTab-textColorPrimary {
+            color: #404040;
+            &.Mui-selected {
+              color: $primary-heading-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

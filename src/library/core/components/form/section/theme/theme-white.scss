@@ -1,0 +1,19 @@
+@import "~styles/variables";
+
+.theme-white {
+  border: 0.1em solid $panel-border-color;
+  border-radius: 0.7rem;
+
+  .form-section-header {
+    color: $panel-heading-text-color;
+    border-bottom: 1px solid $primary-border-color;
+    background-color: $panel-heading-background-color;
+    border-radius: 0.7rem 0.7rem 0rem 0rem;
+    padding: 2px 10px;
+    height: 40px;
+  }
+  .form-section-footer {
+    background-color: $panel-heading-background-color;
+    border-radius: 0rem 0rem 0.7rem 0.7rem;
+  }
+}

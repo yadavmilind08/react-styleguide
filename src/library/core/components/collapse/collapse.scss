@@ -1,0 +1,31 @@
+@import "~styles/variables";
+
+.collapse {
+  .ant-collapse {
+    color: inherit;
+    font-size: inherit;
+    background-color: $collapse-background-color;
+    border: 1px solid $collapse-border-color;
+    border-radius: 0.4em;
+    .ant-collapse-item:last-child,
+    .ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header {
+      border-radius: 0 0 0.4em 0.4em;
+    }
+    .ant-collapse-item {
+      .ant-collapse-header {
+        padding: 0.4em 1em;
+      }
+    }
+    .ant-collapse-item:last-child > .ant-collapse-content {
+      border-radius: 0 0 0.4em 0.4em;
+    }
+    .ant-collapse-content {
+      background-color: $collapse-content-background-color;
+      border-top: 1px solid $collapse-border-color;
+      color: inherit;
+      .ant-collapse-content-box {
+        padding: 1em;
+      }
+    }
+  }
+}

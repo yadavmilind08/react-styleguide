@@ -1,0 +1,58 @@
+@import "~styles/variables";
+
+.k-splitter {
+  font-family: inherit !important;
+  background: none !important;
+
+  .k-scrollable {
+    overflow: hidden !important;
+  }
+
+  .k-pane {
+    &.k-pane-static {
+      &.k-scrollable {
+        overflow: visible !important;
+      }
+    }
+    &.k-state-hidden {
+      &.hidden {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.k-widget {
+  font-family: inherit !important;
+}
+
+.k-splitbar {
+  &:active,
+  &.k-state-focused {
+    background: none !important;
+  }
+
+  .k-icon {
+    font-size: 25px !important;
+  }
+
+  background-color: none !important;
+}
+
+.k-ghost-splitbar-horizontal,
+.k-splitbar-horizontal {
+  flex-direction: unset !important;
+}
+
+.k-splitbar.k-splitbar-horizontal.k-splitbar-draggable-horizontal {
+  display: none !important;
+}
+
+.k-widget.k-splitter.k-splitter-flex.k-splitter-horizontal {
+  border: 0px;
+  height: calc(100vh - 60px);
+}
+
+.k-splitbar-static-horizontal {
+  display: none !important;
+}

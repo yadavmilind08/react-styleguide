@@ -1,0 +1,9 @@
+export { Modal } from './modal';
+export { ModelSize } from './modal.model';
+export { success } from './success/modal.success';
+export { confirm } from './confirm/modal.confirm';
+export { warning } from './warning/modal.warning';
+export { info } from './info/modal.info';
+export { error } from './error/modal.error';
+export { iframe } from './iframe/modal.iframe';
+export { confirmMessage } from './confirm-message/modal.confirm-message';

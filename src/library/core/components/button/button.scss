@@ -1,0 +1,121 @@
+@import "~styles/variables";
+
+.btn,
+.ant-btn,
+.ant-btn[disabled] {
+  height: 30px;
+  line-height: 0;
+  min-width: 8.5467em;
+  border-radius: 1.4em;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: $color-ffffff;
+  padding: 0 1em;
+  cursor: pointer;
+  background-color: $color-949494;
+
+  &:hover,
+  &:focus {
+    color: $color-ffffff;
+    background-color: transparent;
+    border: none;
+  }
+
+  &:focus {
+    box-shadow: 0.14em 0.14em 0.14em rgba(0, 0, 0, 0.1);
+  }
+
+  &.ant-btn-primary,
+  &.primary {
+    color: $color-ffffff !important;
+    background-color: $color-5e9acf !important;
+
+    &:hover:not([disabled]) {
+      background-color: #0e4472 !important;
+      cursor: pointer;
+    }
+
+    &:focus {
+      background-color: #235a8b !important;
+    }
+  }
+
+  &.secondary {
+    color: $color-ffffff !important;
+    background-color: $color-949494 !important;
+
+    &:hover:not([disabled]) {
+      background-color: #343434 !important;
+      cursor: pointer;
+    }
+
+    &:focus {
+      background-color: #535353 !important;
+    }
+  }
+
+  &.tertiary {
+    height: 2.05em;
+    line-height: 2.05em;
+    background-color: $color-ffffff;
+    border: 0.1em solid #0656b1;
+    color: $button-tertiary-color;
+
+    &:hover:not([disabled]) {
+      background-color: #0656b1 !important;
+      color: $color-ffffff;
+      cursor: pointer;
+    }
+
+    &:focus {
+      background-color: #205a97;
+      color: $color-ffffff;
+    }
+
+    &:disabled {
+      color: $button-tertiary-color !important;
+      border: 0.1em solid #b3cbe7;
+    }
+  }
+
+  &.quaternary {
+    background-color: #d5dfed;
+    border: 0.1em solid #bdcee2;
+    border-radius: 0.4em;
+    height: 1.7em;
+    line-height: 1.7em;
+    min-width: auto;
+    width: auto;
+    color: #1f67b8;
+    padding: 0em 0.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    color: $color-B3CBE7 !important;
+  }
+
+  .btn-icon {
+    padding: 0 0 0 1em;
+
+    &.start {
+      padding: 0 0.5em 0 0;
+    }
+
+    &.end {
+      padding: 0 0 0 0.5em;
+    }
+  }
+}
+
+.btn:disabled,
+.ant-btn:disabled,
+.ant-btn[disabled]:disabled {
+  opacity: 0.3;
+  color: $color-ffffff;
+}

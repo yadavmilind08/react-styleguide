@@ -1,0 +1,285 @@
+@import "~styles/variables";
+
+.table {
+  font-size: 1rem;
+  background: transparent;
+  $rowPadding: 4px 10px;
+
+  .ant-table-wrapper {
+    background-color: $secondary-body-background-color;
+
+    &.empty {
+      overflow: auto;
+    }
+
+    &.bordered {
+      border: 0.05em solid $panel-border-color;
+      border-radius: 0.7em;
+      overflow: visible;
+    }
+    &.no-pagination {
+      .ant-table {
+        .ant-table-footer {
+          .pagination-total-text {
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+
+  .empty {
+    .ant-table {
+      .ant-table-tbody {
+        > tr {
+          > td {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+
+  .ant-table {
+    color: $table-text-color;
+    font-size: 1.2em;
+    background: transparent;
+
+    table {
+      width: 99.5%;
+    }
+
+    .ant-table-header {
+      display: block;
+    }
+
+    .ant-table-body {
+      display: block;
+      overflow-y: auto !important;
+    }
+
+    .ant-modal-content .ant-table-content {
+      // NS: TODO Recheck why we needed this
+      // This was causing each and evry table scroll
+      // and in IE it was also height issues
+      // overflow: auto;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .ant-table-thead {
+      > tr {
+        > th {
+          padding: $rowPadding;
+          color: $table-header-text-color;
+          font-weight: 600;
+          background: transparent;
+          // $table-header-background-color
+          // border-bottom: 0.1em solid $table-row-border-color;
+        }
+
+        &:first-child th:first-child {
+          border-top-left-radius: 0;
+        }
+      }
+    }
+    .ant-table-tbody {
+      > tr {
+        > td {
+          padding: $rowPadding;
+          border-bottom: 0.1em solid $table-row-border-color;
+          position: static;
+        }
+      }
+    }
+    .ant-table {
+      tfoot {
+        > tr {
+          > th {
+            padding: $rowPadding;
+          }
+          > td {
+            padding: $rowPadding;
+          }
+        }
+      }
+    }
+
+    .ant-table-column-sorters {
+      padding: 0;
+    }
+
+    .ant-table-column-sorter-up,
+    .ant-table-column-sorter-down {
+      font-size: 1em;
+
+      &.active {
+        color: $table-header-text-color;
+      }
+    }
+
+    td.ant-table-column-sort {
+      background: $table-background-color;
+    }
+
+    .ant-table-footer {
+      padding: 0;
+      background: transparent;
+      .pagination-total-text {
+        position: absolute;
+        padding: 0;
+        color: $table-text-color;
+        font-weight: 600;
+        margin: 10px;
+      }
+    }
+  }
+
+  /* Resize */
+  .react-resizable {
+    position: relative;
+    background-clip: padding-box;
+    border-right: 0.1em solid $table-column-resize-border-color;
+  }
+
+  .react-resizable-handle {
+    position: absolute;
+    width: 1em;
+    height: 100%;
+    bottom: 0;
+    right: -5px;
+    cursor: col-resize;
+    z-index: 1;
+  }
+}
+
+/* Drag Drop Resize */
+.table-draggable {
+  .column {
+    cursor: move;
+    .ant-table-column-sorter {
+      cursor: pointer;
+    }
+  }
+}
+
+.ant-table-pagination {
+  font-size: 1.2em;
+  margin: 1em;
+  color: $table-text-color;
+  font-weight: 600;
+
+  $itemHeightWidth: 2.6em;
+
+  &.ant-pagination {
+    margin: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    display: flow-root;
+  }
+
+  .ant-pagination-item,
+  .ant-pagination-prev,
+  .ant-pagination-next,
+  .ant-pagination-jump-prev,
+  .ant-pagination-jump-next {
+    height: $itemHeightWidth;
+    min-width: $itemHeightWidth;
+    line-height: $itemHeightWidth;
+  }
+
+  .ant-pagination-item,
+  .ant-pagination-prev,
+  .ant-pagination-jump-prev,
+  .ant-pagination-jump-next {
+    margin-right: 0.5em;
+  }
+
+  .ant-pagination-slash {
+    // visibility: hidden;
+    color: #ffffff;
+  }
+
+  li {
+    &.ant-pagination-prev,
+    &.ant-pagination-next {
+      height: 1.8em;
+      line-height: 1.8em;
+      width: 3em;
+      border: 0.1em solid $table-row-border-color;
+      :focus,
+      :hover {
+        color: $table-text-color;
+      }
+    }
+    &.ant-pagination-prev {
+      position: absolute;
+      margin-left: 16.6em;
+      margin-right: 0;
+      border-top-left-radius: 0.4em;
+      border-bottom-left-radius: 0.4em;
+      border-right: none;
+    }
+    &.ant-pagination-next {
+      margin-left: 2.9em;
+      border-top-right-radius: 0.4em;
+      border-bottom-right-radius: 0.4em;
+    }
+
+    &.ant-pagination-simple-pager {
+      width: 12em;
+      margin-left: 4em;
+      input {
+        height: 1.8em;
+        line-height: 1.8em;
+        width: 2.5em;
+        border-radius: 0.4em;
+        margin: 0;
+        border: 0.1em solid $table-row-border-color;
+        :hover {
+          border-color: $table-row-border-color;
+        }
+      }
+      &::before {
+        content: "Page";
+        padding: 0 0.5em;
+        visibility: visible;
+      }
+
+      .ant-pagination-slash {
+        margin: 0;
+
+        &::after {
+          content: "of";
+          margin-left: 0;
+          visibility: visible;
+          padding: 0 0.4em 0 0;
+          color: $table-text-color;
+        }
+      }
+    }
+  }
+
+  .ant-pagination-total-text {
+    font-size: 1.3em;
+    height: $itemHeightWidth;
+    line-height: $itemHeightWidth;
+    float: left;
+  }
+
+  .ant-pagination-item-active a {
+    color: $pagination-active-text-color;
+    font-weight: 600;
+  }
+}
+
+.ant-table-placeholder {
+  height: 7em;
+  color: #bbb !important;
+}
+
+/* Drag Drop Shuffle */
+.table-column-drag {
+  border-left: 0.2em dashed $table-drag-color !important;
+}

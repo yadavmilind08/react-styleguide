@@ -1,0 +1,13 @@
+@import "~styles/variables";
+
+.note {
+  font-size: 1rem;
+
+  .content {
+    font-size: 1.2em;
+    padding: 1em;
+    border: 0.1em solid $note-border-color;
+    background-color: $note-background-color;
+    border-radius: 0.3em;
+  }
+}

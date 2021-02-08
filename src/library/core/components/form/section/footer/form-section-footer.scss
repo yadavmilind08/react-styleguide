@@ -1,0 +1,11 @@
+@import "~styles/variables";
+
+.form-section-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 6px 10px;
+  border-top: 1px solid $primary-border-color;
+  height: 40px;
+}
